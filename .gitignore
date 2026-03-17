@@ -1,3 +1,45 @@
+# ==============================
+# SAFETY: Never commit these
+# ==============================
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.cram
+*.vcf
+*.vcf.gz
+*.bcf
+*.sam
+
+# Large intermediate files
+*.h5
+*.h5ad
+*.rds
+*.RData
+*.loom
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.Rproj.user
+.Rhistory
+*.Rproj
+.vscode/
+.idea/
+
+# Sensitive / PHI risk
+*patient_name*
+*MRN*
+*mrn*
+*DOB*
+*SSN*
+*ssn*
+*date_of_birth*
+
 # History files
 .Rhistory
 .Rapp.history
