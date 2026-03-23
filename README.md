@@ -6,9 +6,8 @@
 ---
 
 ## Project Overview
-Example fields:
 
-| Field                  | Value                                                       |
+| Information            | Details                                                       |
 |------------------------|-------------------------------------------------------------|
 | **IRB Protocol**       | `XX-XXX`                                                    |
 | **IGO Project ID**     | _e.g., XXXXX_                                               |
