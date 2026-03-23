@@ -103,10 +103,10 @@ This file should contain the clinical outcomes and other phenotypes relevant to 
 | Requirement          | Details                                                             |
 |----------------------|---------------------------------------------------------------------|
 | **Format**           | Comma-separated, UTF-8, Unix or DOS line endings                    |
-| **Required columns** | `patient.id`, `trt`, `pfs`, `best.overall.response`                 |
+| **Required columns** | `patient.id`, `trt`, `tumor.type`,`mold.histology`, `pfs`, `best.overall.response` |
 | **For ages e.g. `age of diagnosis`** | Write in years, e.g. 50; any age greater than 89 must be labeled as 89+ |
 | **For timepoints**   | Use relative offsets only (`day 0`, `day 28`; or week 0`, `week 4`) — no calendar dates in the repo.  E.g. number of days relative to baseline, screening, 1st day of treatment  |
-| **Notes**            | Free-text notes relevant to the data analysis or interpretation from a bioinformatitian or statistician |
+| **Notes**            | Free-text notes relevant to the data analysis or interpretation from a bioinformatitian or statistician, e.g. `abridged.path.review` |
 | **PHI check**        | Must pass a manual review for all 18 HIPAA identifiers              |
 | **Consistency**      | Every `sample` value must match entries in the other metadata files |
 
