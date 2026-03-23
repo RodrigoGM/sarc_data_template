@@ -1,4 +1,4 @@
-# <PROJECT TITLE> — Data Sharing Repository
+# [PROJECT TITLE] — Data Sharing Repository
 
 > **⚠️ WARNING: This repository must NEVER contain Protected Health Information (PHI).
 > See [CHECKLIST.md](CHECKLIST.md) before adding or modifying any file.**
