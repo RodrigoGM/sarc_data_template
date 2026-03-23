@@ -101,21 +101,22 @@ This file was inspired by nf-core.  Ideally use a samplesheet that's compatible 
 This file should contain the clinical outcomes and other phenotypes relevant to a clinical trial. File records are per patient.  Additional companion files are permited e.g. `deidentified.spiderplot.csv`, a long-format relative date file useful for spider plots to asses the duration of response across individuals.  
 
 | Requirement          | Details                                                             |
-|----------------------+---------------------------------------------------------------------|
+|----------------------|---------------------------------------------------------------------|
 | **Format**           | Comma-separated, UTF-8, Unix or DOS line endings                    |
 | **Required columns** | `patient.id`, `trt`, `pfs`, `best.overall.response`                 |
 | **For ages e.g. `age of diagnosis`** | Write in years, e.g. 50; any age greater than 89 must be labeled as 89+ |
-| **For timepoints**   | Use relative offsets only (`day 0`, `day 28`; or week 0`, `week 4`) — no calendar dates in the repo.  E.g. number of days relative to baseline, screening, 1st day of treatment. |
+| **For timepoints**   | Use relative offsets only (`day 0`, `day 28`; or week 0`, `week 4`) — no calendar dates in the repo.  E.g. number of days relative to baseline, screening, 1st day of treatment  |
 | **Notes**            | Free-text notes relevant to the data analysis or interpretation from a bioinformatitian or statistician |
 | **PHI check**        | Must pass a manual review for all 18 HIPAA identifiers              |
 | **Consistency**      | Every `sample` value must match entries in the other metadata files |
-**Notes:** Year of birth is discuraged, but not strictly prohibited, however, disclosing ages above 90 is prohibited, making year of birth an potential violation of HIPPA rules.
+
+**WARNING:** Year of birth is discuraged, but not strictly prohibited, however, disclosing ages above 90 is prohibited, making year of birth an potential violation of HIPPA rules.
 
 #### `deidentified.sequence.metadata.txt`
 This file should contain the information relevant to the data collection. File records are per sample or replicate, whichever is applicable.
 
 | Requirement          | Details                                               |
-|----------------------+-------------------------------------------------------|
+|----------------------|-------------------------------------------------------|
 | **Format**           | Tab-delimited, UTF-8, Unix line endings               |
 | **Required columns** | `patient.id`, `sample.id`, `timepoint`, `lab notes`, `clinical notes` |
 | **For timepoints**   | Relative offsets only (e.g., `day0`, `day30`)         |
@@ -140,7 +141,7 @@ This file should contain the information relevant to the data collection. File r
 - Each subfolder must be self-explanatory and include a `README.md`.
 
 | Requirement               | Details                                                                                                         |
-|---------------------------+-----------------------------------------------------------------------------------------------------------------|
+|---------------------------|-----------------------------------------------------------------------------------------------------------------|
 | **Sub-folder naming**     | Lowercase, underscores, descriptive with a number prefix (e.g., `03_differential_expression/`)                  |
 | **README per sub-folder** | Each must contain a `README.md` stating: tool name, version, genome build, key parameters, and date of analysis |
 | **Figures**               | Must not embed PHI in titles, legends, or EXIF metadata                                                         |
